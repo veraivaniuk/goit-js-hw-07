@@ -8,13 +8,24 @@ const ingredients = [
 ];
 
 const ulIngredients = document.querySelector("#ingredients");
-console.log(ulIngredients );
+//console.log(ulIngredients);
 
-for (let i = 0; i < ingredients.length; i += 1) {
-    const listEl = document.createElement('li');
-    listEl.textContent = ingredients[i];
-    ulIngredients.appendChild(listEl);
+const makeListEl = (ingredient) => {
+  const listEl = document.createElement('li');
+  listEl.textContent = ingredient;
+  return listEl;
 }
+
+const arrLi = ingredients.map(makeListEl);
+//console.log(arrLi)
+ulIngredients.append(...arrLi);  
+
+
+//for (let i = 0; i < ingredients.length; i += 1) {
+  //  const listEl = document.createElement('li');
+  //  listEl.textContent = ingredients[i];
+  //  ulIngredients.appendChild(listEl);
+//}
 
 /*Задание 2
 В HTML есть пустой список ul#ingredients.

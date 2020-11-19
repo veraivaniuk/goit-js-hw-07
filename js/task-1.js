@@ -1,13 +1,17 @@
 console.log(`Task 1`)
 const uListEl = document.querySelectorAll("li.item");
-const titleEl = document.querySelectorAll("h2");
 console.log(`В списке ${uListEl.length} категории`);
 
-for (let i = 0; i < uListEl.length; i += 1) {
-  const titles = titleEl[i].textContent;
-  const items = uListEl[i].children[1].children.length;
-  console.log(`Категория: ${titles}\nКоличество элементов: ${items}`);
-};
+uListEl.forEach(
+  (child) => {
+    console.log(`Категория: ${child.children[0].textContent}\nКоличество элементов: ${child.children[1].children.length}`)
+  })
+
+//for (let i = 0; i < uListEl.length; i += 1) {
+  //const titles = titleEl[i].textContent;
+ // const items = uListEl[i].children[1].children.length;
+ // console.log(`Категория: ${titles}\nКоличество элементов: ${items}`);
+//};
 
 /*Задание 1
 В HTML есть список категорий ul#categories.

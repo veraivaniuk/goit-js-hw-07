@@ -7,11 +7,9 @@ let counterValue = + valueRef.textContent;
 
 function increment() {
   counterValue += 1;
-  return counterValue;
 }
 function decrement() {
   counterValue -= 1;
-  return counterValue;
 }
 
 //console.log(btnIncresEl, btnDecresEl);

@@ -19,10 +19,14 @@ const images = [
 const listImages = document.getElementById("gallery");
 
 //создание тегов используя шаблонную строку
-images.forEach((img) => {
-    const itemImg = `<li class = "gallery"><img src = "${img.url}" alt = "${img.alt}" width = "400px" height = "250px"></li>`;
-    listImages.insertAdjacentHTML('beforeend', itemImg);
-})
+const makeListImg = (img) => {
+  const itemImg = `<li class = "gallery"><img src = "${img.url}" alt = "${img.alt}" width = "400px" height = "250px"></li>`;
+  return itemImg;
+
+}
+const itemsImg = images.map(makeListImg);
+
+listImages.insertAdjacentHTML('beforeend', itemsImg.reduce((acc, img) => `${acc} ${img}`,''));
 
 //добавила стили
 listImages.style.display = "flex";
