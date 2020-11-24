@@ -27,7 +27,7 @@ console.log(amount);
 const divBoxes = document.getElementById('boxes');
 const box = document.createElement('div');
 
-function reateBoxes(amount) {
+function сreateBoxes(amount) {
   
  }
 //function randomHsl = () => {'hsla(${Math.random() * 360}, 100%, 50%, 1)'};

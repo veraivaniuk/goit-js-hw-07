@@ -26,7 +26,7 @@ const makeListImg = (img) => {
 }
 const itemsImg = images.map(makeListImg);
 
-listImages.insertAdjacentHTML('beforeend', itemsImg.reduce((acc, img) => `${acc} ${img}`,''));
+listImages.insertAdjacentHTML('beforeend', itemsImg.join(''));
 
 //добавила стили
 listImages.style.display = "flex";
